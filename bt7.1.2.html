@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bt7.1</title>
+</head>
+
+<body>
+    <script>
+        let N = +prompt("Nhập giá trị của N (2 <= N <= 100):");
+        do {
+
+            if (N < 2 || N > 100) {
+                alert("Giá trị của N không hợp lệ. Vui lòng nhập lại.");
+                break;
+            }
+        } while (N < 2 || N > 100);
+        let result = "";
+        for (let i = 2; i <= N; i++) {
+            let square = i * i;
+            if (square % 2 == 0) {
+                result += square + ",";
+            }
+        }
+        console.log(result);
+    </script>
+</body>
+
+</html>

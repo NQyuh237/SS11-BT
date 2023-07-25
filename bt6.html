@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bt6</title>
+</head>
+
+<body>
+    <script>
+        function Prime(n) {
+            if (n < 2) return false;
+            if (n % 2 == 0) return n == 2;
+            for (let i = 3; i * i <= n; i += 2) {
+                if (n % i == 0) return false;
+            }
+            return true;
+        }
+        for (let number = 2, count = 0; count < 20; number++) {
+            if (Prime(number)) {
+                console.log(number);
+                count++;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

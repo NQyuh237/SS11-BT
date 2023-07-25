@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bt6</title>
+</head>
+
+<body>
+    <table id="table" border="1">
+        <thead id="tb_thead">
+        </thead>
+        <tbody id="tb_body">
+        </tbody>
+    </table>
+    <script>
+        let ths = "";
+        for (let i = 1; i <= 10; i++) {
+            ths += `<th>${i}x</th>`;
+        }
+        document.getElementById("tb_thead").innerHTML = ths;
+
+        let trs = "";
+        for (let i = 1; i <= 10; i++) {
+            let tds = "";
+            for (let j = 1; j <= 10; j++) {
+                tds = tds + `<td>${j} x ${i} = ${i * j}</td>`
+            }
+            trs = trs + `<tr>${tds}</tr>`
+        }
+        document.getElementById("tb_body").innerHTML = trs;
+    </script>
+</body>
+
+</html>
